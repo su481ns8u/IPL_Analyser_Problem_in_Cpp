@@ -35,6 +35,11 @@ double Batsman::get_avg()
     return this->avg;
 }
 
+double Batsman::get_sr()
+{
+    return this->stk_rate;
+}
+
 string Batsman::to_string()
 {
     return this->name + " " + std::to_string(this->avg) + "\n";

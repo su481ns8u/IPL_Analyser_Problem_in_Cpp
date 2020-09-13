@@ -1,6 +1,7 @@
-#include <iostream>
+#pragma once
 
 enum Sort_Choice
 {
-    AVERAGE = 1
+    AVERAGE = 0,
+    STRIKING_RATES
 };

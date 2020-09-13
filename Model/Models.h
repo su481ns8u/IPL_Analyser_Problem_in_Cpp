@@ -17,6 +17,7 @@ public:
     void set_runs_4s_6s(int runs, int fours, int sixes);
     void set_avg_and_strike(double stk_rate, double avg);
     double get_avg();
+    double get_sr();
     string to_string();
 };
 
@@ -34,5 +35,5 @@ public:
 class Sort_By_Params
 {
 public:
-    list<Batsman> sort(list<Batsman> batting_data);
+    list<Batsman> sort(list<Batsman> batting_data, Sort_Choice sort_choice);
 };

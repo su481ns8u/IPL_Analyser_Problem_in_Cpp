@@ -12,4 +12,5 @@ void Players_View::print_batsmen(list<Batsman> batsmen, int amount)
         if (count == amount)
             break;
     }
+    cout << endl;
 }
