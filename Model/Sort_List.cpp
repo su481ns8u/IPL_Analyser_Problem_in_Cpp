@@ -74,6 +74,12 @@ list<Bowler> Sort_By_Params::sort_bowlers(list<Bowler> bowling_data, Bowler_Sort
         });
         return bowling_data;
         break;
+    case AVERAGE_WITH_STRIKE_RATE:
+        bowling_data.sort([](Bowler &first, Bowler &second) {
+            return (first.get_sr() > second.get_sr()) && (first.get_avg() > second.get_avg());
+        });
+        return bowling_data;
+        break;
     default:
         cout << "Invalid Choice !!!";
         break;

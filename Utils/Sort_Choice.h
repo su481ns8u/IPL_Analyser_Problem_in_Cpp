@@ -15,5 +15,7 @@ enum Bowler_Sort_Choice
     AVERAGE = 0,
     BOWLING_STRIKE_RATE,
     ECONOMY_RATE,
-    SR_WITH_5W_AND_4W
+    SR_WITH_5W_AND_4W,
+    AVERAGE_WITH_STRIKE_RATE
+    
 };
