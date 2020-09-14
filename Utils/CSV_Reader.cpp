@@ -15,7 +15,11 @@ list<vector<string>> CSV_Reader::readFromFile(string fileName)
             getline(file, line);
             stringstream s(line);
             while (getline(s, word, ','))
+            {
+                if (word == "-")
+                    word = "0";
                 row.push_back(word);
+            }
             compList.push_back(row);
         }
         file.close();

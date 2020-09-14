@@ -9,4 +9,5 @@ class Players_View
 public:
     Players_View();
     void print_batsmen(list<Batsman> batsmen, int amount);
+    void print_bowler(list<Bowler> bowlers, int amount);
 };

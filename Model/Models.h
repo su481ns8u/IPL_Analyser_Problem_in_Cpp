@@ -2,6 +2,7 @@
 #include "../Utils/Sort_Choice.h"
 
 using namespace std;
+
 class Batsman
 {
     string name;
@@ -23,6 +24,25 @@ public:
     string to_string();
 };
 
+class Bowler
+{
+    string name;
+    double avg = 0;
+    double stk_rate = 0;
+    double eco_rate = 0;
+    int five_ws = 0;
+    int four_ws = 0;
+    int wkts = 0;
+
+public:
+    Bowler(string name);
+    Bowler(vector<string> obj_params);
+    void set_avg_sr_and_er(double avg, double stk_rate, double eco_rate);
+    void set_5w_4w_and_wkts(int five_ws, int four_ws, int wkts);
+    double get_avg();
+    string to_string();
+};
+
 class Batting_Model
 {
     list<Batsman> batting_data;
@@ -34,8 +54,20 @@ public:
     void set_batsman_list(list<Batsman> batting_data);
 };
 
+class Bowling_Model
+{
+    list<Bowler> bowling_data;
+
+public:
+    Bowling_Model();
+    Bowling_Model(string file_name);
+    list<Bowler> get_bowlers_list();
+    void set_bowlers_list(list<Bowler> bowling_data);
+};
+
 class Sort_By_Params
 {
 public:
-    list<Batsman> sort(list<Batsman> batting_data, Sort_Choice sort_choice);
+    list<Batsman> sort_batsmen(list<Batsman> batting_data, Batsman_Sort_Choice sort_choice);
+    list<Bowler> sort_bowlers(list<Bowler> bowing_data, Bowler_Sort_Choice sort_choice);
 };

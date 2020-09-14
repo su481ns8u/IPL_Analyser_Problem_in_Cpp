@@ -1,10 +1,10 @@
 #include "../Model/Models.h"
 
-list<Batsman> Sort_By_Params::sort(list<Batsman> batting_data, Sort_Choice sort_choice)
+list<Batsman> Sort_By_Params::sort_batsmen(list<Batsman> batting_data, Batsman_Sort_Choice sort_choice)
 {
     switch (sort_choice)
     {
-    case AVERAGE:
+    case BATTING_AVERAGE:
         batting_data.sort([](Batsman &first, Batsman &second) {
             return first.get_avg() > second.get_avg();
         });
@@ -39,6 +39,22 @@ list<Batsman> Sort_By_Params::sort(list<Batsman> batting_data, Sort_Choice sort_
             return (first.get_avg() > second.get_avg()) && (first.get_runs() > second.get_runs());
         });
         return batting_data;
+        break;
+    default:
+        cout << "Invalid Choice !!!";
+        break;
+    }
+}
+
+list<Bowler> Sort_By_Params::sort_bowlers(list<Bowler> bowling_data, Bowler_Sort_Choice sort_choice)
+{
+    switch (sort_choice)
+    {
+    case AVERAGE:
+        bowling_data.sort([](Bowler &first, Bowler &second) {
+            return first.get_avg() > second.get_avg();
+        });
+        return bowling_data;
         break;
     default:
         cout << "Invalid Choice !!!";
