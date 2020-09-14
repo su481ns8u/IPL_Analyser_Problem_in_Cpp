@@ -16,6 +16,12 @@ list<Batsman> Sort_By_Params::sort(list<Batsman> batting_data, Sort_Choice sort_
         });
         return batting_data;
         break;
+    case MAX_6S_AND_4S:
+        batting_data.sort([](Batsman &first, Batsman &second) {
+            return first.get_total_6s_4s() > second.get_total_6s_4s();
+        });
+        return batting_data;
+        break;
     default:
         cout << "Invalid Choice !!!";
         break;

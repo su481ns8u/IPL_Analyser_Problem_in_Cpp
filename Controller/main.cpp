@@ -28,5 +28,6 @@ int main(int argc, char const *argv[])
     Controller controller(batting_file_path);
     controller.sort_and_display(2, AVERAGE);
     controller.sort_and_display(4, STRIKING_RATES);
+    controller.sort_and_display(3, MAX_6S_AND_4S);
     return 0;
 }

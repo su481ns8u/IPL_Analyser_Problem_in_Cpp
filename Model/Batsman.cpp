@@ -40,7 +40,18 @@ double Batsman::get_sr()
     return this->stk_rate;
 }
 
+int Batsman::get_total_6s_4s()
+{
+    return this->sixes + this->fours;
+}
+
 string Batsman::to_string()
 {
-    return this->name + " " + std::to_string(this->avg) + "\n";
+    return "Name: " + this->name +
+           "\nAverage: " + std::to_string(this->avg) +
+           "\tStrike Rate: " + std::to_string(this->stk_rate) +
+           "\n6s: " + std::to_string(this->sixes) +
+           "\t4s: " + std::to_string(this->fours) +
+           "\truns: " + std::to_string(this->runs) +
+           "\n\n";
 }

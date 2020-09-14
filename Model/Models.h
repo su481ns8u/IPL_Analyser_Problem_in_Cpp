@@ -18,6 +18,7 @@ public:
     void set_avg_and_strike(double stk_rate, double avg);
     double get_avg();
     double get_sr();
+    int get_total_6s_4s();
     string to_string();
 };
 
