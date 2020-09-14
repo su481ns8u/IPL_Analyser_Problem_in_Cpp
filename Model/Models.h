@@ -41,6 +41,7 @@ public:
     void set_5w_4w_and_wkts(int five_ws, int four_ws, int wkts);
     double get_avg();
     double get_sr();
+    double get_ec();
     string to_string();
 };
 

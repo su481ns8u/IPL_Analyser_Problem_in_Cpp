@@ -13,5 +13,6 @@ enum Batsman_Sort_Choice
 enum Bowler_Sort_Choice
 {
     AVERAGE = 0,
-    BOWLING_STRIKE_RATE
+    BOWLING_STRIKE_RATE,
+    ECONOMY_RATE
 };

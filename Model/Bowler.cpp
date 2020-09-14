@@ -39,6 +39,11 @@ double Bowler::get_sr()
     return this->stk_rate;
 }
 
+double Bowler::get_ec()
+{
+    return this->eco_rate;
+}
+
 string Bowler::to_string()
 {
     return "Name: " + this->name +

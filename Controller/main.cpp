@@ -35,7 +35,9 @@ int main(int argc, char const *argv[])
 {
     string batting_file_path = "./Resources/MostRuns.csv";
     string bowling_file_path = "./Resources/MostWickets.csv";
+
     Controller controller(batting_file_path, bowling_file_path);
+
     controller.sort_and_display_batsmen(1, BATTING_AVERAGE);
     controller.sort_and_display_batsmen(1, STRIKING_RATES);
     controller.sort_and_display_batsmen(1, MAX_6S_AND_4S);
@@ -45,5 +47,7 @@ int main(int argc, char const *argv[])
 
     controller.sort_and_display_bowlers(1, AVERAGE);
     controller.sort_and_display_bowlers(1, BOWLING_STRIKE_RATE);
+    controller.sort_and_display_bowlers(1, ECONOMY_RATE);
+
     return 0;
 }
