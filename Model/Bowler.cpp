@@ -33,3 +33,20 @@ double Bowler::get_avg()
 {
     return this->avg;
 }
+
+double Bowler::get_sr()
+{
+    return this->stk_rate;
+}
+
+string Bowler::to_string()
+{
+    return "Name: " + this->name +
+           "\nAverage: " + std::to_string(this->avg) +
+           "\tStrike Rate: " + std::to_string(this->stk_rate) +
+           "\tEco Rate: " + std::to_string(this->eco_rate) +
+           "\n5ws: " + std::to_string(this->five_ws) +
+           "\t4ws: " + std::to_string(this->four_ws) +
+           "\tWickets: " + std::to_string(this->wkts) +
+           "\n\n";
+}

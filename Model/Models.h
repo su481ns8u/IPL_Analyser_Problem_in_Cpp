@@ -40,6 +40,7 @@ public:
     void set_avg_sr_and_er(double avg, double stk_rate, double eco_rate);
     void set_5w_4w_and_wkts(int five_ws, int four_ws, int wkts);
     double get_avg();
+    double get_sr();
     string to_string();
 };
 

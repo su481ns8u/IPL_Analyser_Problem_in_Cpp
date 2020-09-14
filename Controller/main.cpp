@@ -43,6 +43,7 @@ int main(int argc, char const *argv[])
     controller.sort_and_display_batsmen(1, AVERAGES_WITH_STRIKE_RATES);
     controller.sort_and_display_batsmen(1, MAX_RUNS_AND_AVERAGE);
 
-    controller.sort_and_display_bowlers(3, AVERAGE);
+    controller.sort_and_display_bowlers(1, AVERAGE);
+    controller.sort_and_display_bowlers(1, BOWLING_STRIKE_RATE);
     return 0;
 }
