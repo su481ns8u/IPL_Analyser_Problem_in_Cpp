@@ -57,8 +57,14 @@ int Batsman::get_runs()
     return this->runs;
 }
 
-string Batsman::get_name() {
+string Batsman::get_name()
+{
     return this->name;
+}
+
+int Batsman::get_100s()
+{
+    return this->hundreds;
 }
 
 string Batsman::to_string()
@@ -69,5 +75,6 @@ string Batsman::to_string()
            "\n6s: " + std::to_string(this->sixes) +
            "\t4s: " + std::to_string(this->fours) +
            "\truns: " + std::to_string(this->runs) +
+           "\t100s: " + std::to_string(this->hundreds) +
            "\n\n";
 }

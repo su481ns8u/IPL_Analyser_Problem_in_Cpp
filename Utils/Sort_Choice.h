@@ -7,7 +7,8 @@ enum Batsman_Sort_Choice
     MAX_6S_AND_4S,
     STRIKE_RATES_WITH_6S_AND_4S,
     AVERAGES_WITH_STRIKE_RATES,
-    MAX_RUNS_AND_AVERAGE
+    MAX_RUNS_AND_AVERAGE,
+    MAX_100S_AND_BAT_AVERAGES
 };
 
 enum Bowler_Sort_Choice

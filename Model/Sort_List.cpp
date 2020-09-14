@@ -40,6 +40,12 @@ list<Batsman> Sort_By_Params::sort_batsmen(list<Batsman> batting_data, Batsman_S
         });
         return batting_data;
         break;
+    case MAX_100S_AND_BAT_AVERAGES:
+        batting_data.sort([](Batsman &first, Batsman &second) {
+            return (first.get_100s() > second.get_100s()) && (first.get_avg() > second.get_avg());
+        });
+        return batting_data;
+        break;
     default:
         cout << "Invalid Choice !!!";
         break;
