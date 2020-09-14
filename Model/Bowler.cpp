@@ -49,6 +49,11 @@ int Bowler::get_total_5ws_4ws()
     return this->five_ws + this->four_ws;
 }
 
+int Bowler::get_wkts()
+{
+    return this->wkts;
+}
+
 string Bowler::to_string()
 {
     return "Name: " + this->name +

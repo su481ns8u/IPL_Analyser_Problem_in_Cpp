@@ -80,6 +80,12 @@ list<Bowler> Sort_By_Params::sort_bowlers(list<Bowler> bowling_data, Bowler_Sort
         });
         return bowling_data;
         break;
+    case MAX_WKTS_WITH_AVG:
+        bowling_data.sort([](Bowler &first, Bowler &second) {
+            return (first.get_wkts() > second.get_wkts()) && (first.get_avg() > second.get_avg());
+        });
+        return bowling_data;
+        break;
     default:
         cout << "Invalid Choice !!!";
         break;

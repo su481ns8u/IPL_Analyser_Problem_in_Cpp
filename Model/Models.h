@@ -43,6 +43,7 @@ public:
     double get_sr();
     double get_ec();
     int get_total_5ws_4ws();
+    int get_wkts();
     string to_string();
 };
 

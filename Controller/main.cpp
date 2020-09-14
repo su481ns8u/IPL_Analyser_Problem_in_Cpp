@@ -50,6 +50,7 @@ int main(int argc, char const *argv[])
     controller.sort_and_display_bowlers(1, ECONOMY_RATE);
     controller.sort_and_display_bowlers(1, SR_WITH_5W_AND_4W);
     controller.sort_and_display_bowlers(1, AVERAGE_WITH_STRIKE_RATE);
+    controller.sort_and_display_bowlers(1, MAX_WKTS_WITH_AVG);
 
     return 0;
 }
