@@ -19,6 +19,7 @@ public:
     double get_avg();
     double get_sr();
     int get_total_6s_4s();
+    int get_runs();
     string to_string();
 };
 

@@ -31,5 +31,6 @@ int main(int argc, char const *argv[])
     controller.sort_and_display(1, MAX_6S_AND_4S);
     controller.sort_and_display(1, STRIKE_RATES_WITH_6S_AND_4S);
     controller.sort_and_display(1, AVERAGES_WITH_STRIKE_RATES);
+    controller.sort_and_display(1, MAX_RUNS_AND_AVERAGE);
     return 0;
 }

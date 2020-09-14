@@ -45,6 +45,10 @@ int Batsman::get_total_6s_4s()
     return this->sixes + this->fours;
 }
 
+int Batsman::get_runs(){
+    return this->runs;
+}
+
 string Batsman::to_string()
 {
     return "Name: " + this->name +
