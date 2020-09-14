@@ -44,6 +44,11 @@ double Bowler::get_ec()
     return this->eco_rate;
 }
 
+int Bowler::get_total_5ws_4ws()
+{
+    return this->five_ws + this->four_ws;
+}
+
 string Bowler::to_string()
 {
     return "Name: " + this->name +

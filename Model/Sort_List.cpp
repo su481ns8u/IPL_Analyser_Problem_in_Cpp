@@ -68,6 +68,12 @@ list<Bowler> Sort_By_Params::sort_bowlers(list<Bowler> bowling_data, Bowler_Sort
         });
         return bowling_data;
         break;
+    case SR_WITH_5W_AND_4W:
+        bowling_data.sort([](Bowler &first, Bowler &second) {
+            return (first.get_sr() > second.get_sr()) && (first.get_total_5ws_4ws() > second.get_total_5ws_4ws());
+        });
+        return bowling_data;
+        break;
     default:
         cout << "Invalid Choice !!!";
         break;

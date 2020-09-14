@@ -42,6 +42,7 @@ public:
     double get_avg();
     double get_sr();
     double get_ec();
+    int get_total_5ws_4ws();
     string to_string();
 };
 
