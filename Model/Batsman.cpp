@@ -67,6 +67,11 @@ int Batsman::get_100s()
     return this->hundreds;
 }
 
+int Batsman::get_50s()
+{
+    return this->get_50s();
+}
+
 string Batsman::to_string()
 {
     return "Name: " + this->name +

@@ -25,6 +25,7 @@ public:
     int get_total_6s_4s();
     int get_runs();
     int get_100s();
+    int get_50s();
     string get_name();
     string to_string();
 };

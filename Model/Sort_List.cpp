@@ -46,6 +46,18 @@ list<Batsman> Sort_By_Params::sort_batsmen(list<Batsman> batting_data, Batsman_S
         });
         return batting_data;
         break;
+    case NO_100_AND_50S_BUT_GOOD_AVG:
+    {
+        list<Batsman> temp_list;
+        for (Batsman batsman : batting_data)
+            if (batsman.get_100s() == 0 && batsman.get_50s() == 0)
+                temp_list.push_back(batsman);
+        temp_list.sort([](Batsman &first, Batsman &second) {
+            return first.get_avg() > second.get_avg();
+        });
+        return temp_list;
+    }
+    break;
     default:
         cout << "Invalid Choice !!!";
         break;
