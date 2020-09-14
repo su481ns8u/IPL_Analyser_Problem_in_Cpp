@@ -62,5 +62,6 @@ int main(int argc, char const *argv[])
     controller.sort_and_display_bowlers(1, MAX_WKTS_WITH_AVG);
 
     controller.sort_and_display_allrounders(1, BATTING_AND_BOWLING_AVG);
+    controller.sort_and_display_allrounders(1, MOST_RUNS_AND_WICKETS);
     return 0;
 }
