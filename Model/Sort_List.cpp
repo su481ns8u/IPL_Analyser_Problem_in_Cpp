@@ -28,6 +28,12 @@ list<Batsman> Sort_By_Params::sort(list<Batsman> batting_data, Sort_Choice sort_
         });
         return batting_data;
         break;
+    case AVERAGES_WITH_STRIKE_RATES:
+        batting_data.sort([](Batsman &first, Batsman &second) {
+            return (first.get_avg() > second.get_avg()) && (first.get_sr() > second.get_sr());
+        });
+        return batting_data;
+        break;
     default:
         cout << "Invalid Choice !!!";
         break;
