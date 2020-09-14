@@ -26,8 +26,9 @@ int main(int argc, char const *argv[])
 {
     string batting_file_path = "./Resources/MostRuns.csv";
     Controller controller(batting_file_path);
-    controller.sort_and_display(2, AVERAGE);
-    controller.sort_and_display(4, STRIKING_RATES);
-    controller.sort_and_display(3, MAX_6S_AND_4S);
+    controller.sort_and_display(1, AVERAGE);
+    controller.sort_and_display(1, STRIKING_RATES);
+    controller.sort_and_display(1, MAX_6S_AND_4S);
+    controller.sort_and_display(1, STRIKE_RATES_WITH_6S_AND_4S);
     return 0;
 }
