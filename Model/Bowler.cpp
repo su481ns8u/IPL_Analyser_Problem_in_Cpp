@@ -54,6 +54,11 @@ int Bowler::get_wkts()
     return this->wkts;
 }
 
+string Bowler::get_name()
+{
+    return this->name;
+}
+
 string Bowler::to_string()
 {
     return "Name: " + this->name +

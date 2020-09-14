@@ -6,6 +6,7 @@ class Controller
 {
     Batting_Model *batting_model;
     Bowling_Model *bowling_model;
+    Allrounder_Model *allrounder_model;
     Players_View *players_view;
 
 public:
@@ -13,6 +14,7 @@ public:
     {
         this->batting_model = new Batting_Model(batting_file_path);
         this->bowling_model = new Bowling_Model(bowling_file_path);
+        this->allrounder_model = new Allrounder_Model(batting_model->get_batsman_list(), bowling_model->get_bowlers_list());
         this->players_view = new Players_View();
     }
 
@@ -28,6 +30,13 @@ public:
         Sort_By_Params sort_by_param;
         list<Bowler> sorted_list = sort_by_param.sort_bowlers(bowling_model->get_bowlers_list(), sort_choice);
         players_view->print_bowler(sorted_list, amount);
+    }
+
+    void sort_and_display_allrounders(int amount, Allrounder_Sort_Choice sort_choice)
+    {
+        Sort_By_Params sort_by_param;
+        list<All_Rounder> sorted_list = sort_by_param.sort_allrounders(allrounder_model->get_allrounder_list(), sort_choice);
+        players_view->print_allrounder(sorted_list, amount);
     }
 };
 
@@ -52,5 +61,6 @@ int main(int argc, char const *argv[])
     controller.sort_and_display_bowlers(1, AVERAGE_WITH_STRIKE_RATE);
     controller.sort_and_display_bowlers(1, MAX_WKTS_WITH_AVG);
 
+    controller.sort_and_display_allrounders(1, BATTING_AND_BOWLING_AVG);
     return 0;
 }

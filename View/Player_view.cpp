@@ -27,3 +27,16 @@ void Players_View::print_bowler(list<Bowler> bowlers, int amount)
     }
     cout << endl;
 }
+
+void Players_View::print_allrounder(list<All_Rounder> allrounders, int amount)
+{
+    int count = 0;
+    for (All_Rounder allrounder : allrounders)
+    {
+        cout << allrounder.to_string();
+        count++;
+        if (count == amount)
+            break;
+    }
+    cout << endl;
+}

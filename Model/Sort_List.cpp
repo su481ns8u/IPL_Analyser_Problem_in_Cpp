@@ -91,3 +91,25 @@ list<Bowler> Sort_By_Params::sort_bowlers(list<Bowler> bowling_data, Bowler_Sort
         break;
     }
 }
+
+list<All_Rounder> Sort_By_Params::sort_allrounders(list<All_Rounder> allrounders_data, Allrounder_Sort_Choice sort_choice)
+{
+    switch (sort_choice)
+    {
+    case BATTING_AND_BOWLING_AVG:
+        allrounders_data.sort([](All_Rounder &first, All_Rounder &second) {
+            return (first.get_batting_avg() > second.get_batting_avg()) && (first.get_bowling_avg() > second.get_bowling_avg());
+        });
+        return allrounders_data;
+        break;
+    case MOST_RUNS_AND_WICKETS:
+        allrounders_data.sort([](All_Rounder &first, All_Rounder &second) {
+            return (first.get_runs() > second.get_runs()) && (first.get_wkts() > second.get_wkts());
+        });
+        return allrounders_data;
+        break;
+    default:
+        cout << "Invalid choice !!!";
+        break;
+    }
+}

@@ -19,3 +19,9 @@ enum Bowler_Sort_Choice
     AVERAGE_WITH_STRIKE_RATE,
     MAX_WKTS_WITH_AVG
 };
+
+enum Allrounder_Sort_Choice
+{
+    BATTING_AND_BOWLING_AVG = 0,
+    MOST_RUNS_AND_WICKETS
+};
